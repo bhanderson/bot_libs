@@ -38,5 +38,6 @@ func Stock(s string) (string, error) {
 		return "", err
 	}
 	output := strings.Replace(string(body), ",", " ", -1)
+	output = "Symbol Last Change Percent\n" + output
 	return output, nil
 }
