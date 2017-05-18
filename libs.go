@@ -37,5 +37,6 @@ func Stock(s string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	return string(body), nil
+	output := strings.Replace(string(body), ",", " ", -1)
+	return output, nil
 }
